@@ -1,0 +1,14 @@
+# Placeholder so workflow_dispatch can target branches that carry the real workflow.
+name: Release Helm Chart
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Run with --ref <branch> that contains the real helm-release workflow."
